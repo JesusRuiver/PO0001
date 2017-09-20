@@ -24,16 +24,11 @@ public class Frase {
 		 * Solicitar al usuario una frase con varias palabras
 		 */
 
-		// String frase = JOptionPane.showInputDialog ("Introduzca una frase por
-		// favor");
-
 		StringTokenizer frase = new StringTokenizer(JOptionPane.showInputDialog("Introduzca una frase por favor"));
 
 		/**
 		 * Mostrar el número de palabras de la frase.
 		 */
-
-		// System.out.print(frase.split("\\s+").length);
 
 		System.out.println(frase.countTokens());
 
@@ -41,14 +36,7 @@ public class Frase {
 		 * Mostrar cada palabra en una línea diferente.
 		 */
 
-		/*
-		 * while (frase.hasMoreTokens()) {
-		 * System.out.println(frase.nextToken());
-		 * 
-		 * }
-		 */
-
-		System.out.println("Sale del bucle");
+		
 
 		/**
 		 * Almacenar en un array de StringBuilder las palabras de la frase.
