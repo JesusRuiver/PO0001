@@ -40,13 +40,20 @@ public class Frase {
 		 * Mostrar el número de palabras de la frase.
 		 */
 		
-		System.out.println(frase.split("\\s+"));
+		System.out.println(frase.split("\\s+").length);
 		
 
 		/**
 		 * Mostrar cada palabra en una línea diferente.
 		 */
 
+		String [] palabras = frase.split("\\s+");
+		
+		for (int i = 0; i < frase.length()-1; i++){
+			
+			System.out.println(palabras[i]);
+		}
+		
 		
 
 		/**
