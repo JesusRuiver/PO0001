@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ejecicio02;
+package ejercicio02;
 
 import javax.sound.sampled.SourceDataLine;
 import javax.swing.JOptionPane;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ejecicio01;
+package ejercicio01;
 
 import java.lang.StringBuilder;
 
