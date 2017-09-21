@@ -3,10 +3,10 @@
  */
 package ejercicio02;
 
-import javax.sound.sampled.SourceDataLine;
-import javax.swing.JOptionPane;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
 
 /**
  * @author Jesús Manuel Ruiz Verdejo
@@ -16,51 +16,55 @@ public class Frase {
 
 	/**
 	 * @param args
+	 * @throws IOException
 	 */
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		/**
 		 * Solicitar al usuario una frase con varias palabras
 		 */
 
-		// String frase = JOptionPane.showInputDialog ("Introduzca una frase por
-		// favor");
+		InputStreamReader entrada = new InputStreamReader(System.in);
+		BufferedReader leerEntrada = new BufferedReader(entrada);
 
-		StringTokenizer frase = new StringTokenizer(JOptionPane.showInputDialog("Introduzca una frase por favor"));
+		System.out.println("Introduzca una frase por favor");
+
+		String frase = leerEntrada.readLine();
+
+		System.out.print("La Frase introducida es: ");
+		System.out.println(frase);
 
 		/**
 		 * Mostrar el número de palabras de la frase.
 		 */
 
-		// System.out.print(frase.split("\\s+").length);
-
-		System.out.println(frase.countTokens());
+		System.out.println("Contiene " + frase.split("\\s+").length + " palabras.");
 
 		/**
 		 * Mostrar cada palabra en una línea diferente.
 		 */
 
-		/*
-		 * while (frase.hasMoreTokens()) {
-		 * System.out.println(frase.nextToken());
-		 * 
-		 * }
-		 */
+		String[] palabras = frase.split("\\s+");
 
-		System.out.println("Sale del bucle");
+		for (int i = 0; i <= frase.split("\\s+").length - 1; i++) {
+
+			System.out.println("Muestra la linea " + i + " que contine la palabra " + palabras[i]);
+		}
 
 		/**
 		 * Almacenar en un array de StringBuilder las palabras de la frase.
 		 */
 
-		int i = frase.countTokens();
+		int i = frase.split("\\s+").length;
 
-		StringBuilder[] palabras = new StringBuilder[i];
+		StringTokenizer palabraStringTokenizer = new StringTokenizer(frase);
 
-		for (int j = 0; j < i; j++) {
+		StringBuilder[] palabrasStringBuilder = new StringBuilder[i];
 
-			String palabra = frase.nextToken();
+		for (i = 0; i <= frase.split("\\s+").length - 1; i++) {
+
+			palabrasStringBuilder[i] = new StringBuilder(palabraStringTokenizer.nextToken());
 
 			/**
 			 * Mostrar los elementos del array anterior y la clase a la que
@@ -68,11 +72,11 @@ public class Frase {
 			 * Object y String getName() de java.lang.Class
 			 */
 
-			System.out.println(j + " " + palabra + "\t " + palabras.getClass());
-			
+			System.out.println(
+					"Almacenammos en la posición " + i + " del Array de StringBuilder " + " " + palabrasStringBuilder[i]
+							+ "\t " + " que pertenece a la Clase " + palabrasStringBuilder.getClass());
 
 		}
 
 	}
-
 }
