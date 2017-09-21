@@ -31,13 +31,15 @@ public class Frase {
 		System.out.println("Introduzca una frase por favor");
 
 		String frase = leerEntrada.readLine();
+
+		System.out.print("La Frase introducida es: ");
 		System.out.println(frase);
 
 		/**
 		 * Mostrar el número de palabras de la frase.
 		 */
 
-		System.out.println(frase.split("\\s+").length);
+		System.out.println("Contiene " + frase.split("\\s+").length + " palabras.");
 
 		/**
 		 * Mostrar cada palabra en una línea diferente.
@@ -47,22 +49,22 @@ public class Frase {
 
 		for (int i = 0; i <= frase.split("\\s+").length - 1; i++) {
 
-			System.out.println(palabras[i]);
+			System.out.println("Muestra la linea " + i + " que contine la palabra " + palabras[i]);
 		}
 
 		/**
 		 * Almacenar en un array de StringBuilder las palabras de la frase.
 		 */
 
-		int i = frase.split("\\s+").length - 1;
+		int i = frase.split("\\s+").length;
 
 		StringTokenizer palabraStringTokenizer = new StringTokenizer(frase);
 
 		StringBuilder[] palabrasStringBuilder = new StringBuilder[i];
 
-		for (int j = 0; j <= i; j++) {
+		for (i = 0; i <= frase.split("\\s+").length - 1; i++) {
 
-			System.out.println(palabraStringTokenizer.nextToken());
+			palabrasStringBuilder[i] = new StringBuilder(palabraStringTokenizer.nextToken());
 
 			/**
 			 * Mostrar los elementos del array anterior y la clase a la que
@@ -70,10 +72,11 @@ public class Frase {
 			 * Object y String getName() de java.lang.Class
 			 */
 
-			System.out.println(j + " " + palabraStringTokenizer + "\t " + palabras.getClass());
+			System.out.println(
+					"Almacenammos en la posición " + i + " del Array de StringBuilder " + " " + palabrasStringBuilder[i]
+							+ "\t " + " que pertenece a la Clase " + palabrasStringBuilder.getClass());
+
 		}
-		
-		
 
 	}
 }
