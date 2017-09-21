@@ -6,7 +6,7 @@ package ejercicio04;
 import java.util.ArrayList;
 
 /**
- * @author Vespertino
+ * @author Jesús Manuel Ruiz Verdejo
  *
  */
 public class PlanetasArrayList {
@@ -72,11 +72,16 @@ public class PlanetasArrayList {
 		/**
 		 * Eliminar todos los elementos del Vector.
 		 */
+		
+		planetas.removeAll(planetas);
+		System.out.println(planetas);
 
 		/**
 		 * Mostrar por consola la capacidad y el tamaño del Vector final.
 		 */
-
+		
+		System.out.println("El tamaño del ArrayList es de " + planetas.size());
+		
 		/**
 		 * NOTA: Si los planetas no se agregan al Vector por orden alfabético,
 		 * pueden ordenarse mediante el método estático void sort(List lista) de

@@ -3,6 +3,8 @@
  */
 package ejercicio05;
 
+import java.util.Hashtable;
+
 /**
  * @author Jesús Manuel Ruiz Verdejo
  *
@@ -20,11 +22,23 @@ public class Notas {
 		 * claves serán objetos Integer, los valores Strings)
 		 */
 		
+		Hashtable<Integer, String> notas = new Hashtable<Integer,String>();
+		
+		notas.put(1505, "aprobado");
+		notas.put(2800, "suspenso");
+		notas.put(1300, "suspenso");
+		notas.put(1234, "aprobado");
+		notas.put(2600, "aprobado");
+		
+		
+		
 		/**
 		 * Crear una clase con un método main para saber si un usuario ha
 		 * aprobado o suspendido una prueba. El funcionamiento será el
 		 * siguiente: el programa solicitará una clave de usuario
 		 */
+		
+		
 
 		/**
 		 * Si no existe la clave, el programa debe mostrar "Clave incorrecta" y
