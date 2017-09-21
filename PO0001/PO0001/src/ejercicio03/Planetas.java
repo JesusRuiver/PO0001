@@ -84,6 +84,9 @@ public class Planetas {
 		/**
 		 * Mostrar por consola la capacidad y el tamaño del Vector final.
 		 */
+		
+		System.out.println ("El tamaños del Vector es de " + planetas.size());
+		System.out.println ("La capacidad del Vector es de " + planetas.capacity());
 
 		/**
 		 * NOTA: Si los planetas no se agregan al Vector por orden alfabético,
