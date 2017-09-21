@@ -77,9 +77,9 @@ public class Planetas {
 		 * Eliminar todos los elementos del Vector.
 		 */
 		
-		planetas.removeAll(planetas);
+		planetas.removeAll(planetas); //Borramos el contenido del Vector
 		
-		System.out.println(planetas);
+		System.out.println(planetas); //Comprobamos que no elementos en el Vector
 
 		/**
 		 * Mostrar por consola la capacidad y el tamaño del Vector final.
