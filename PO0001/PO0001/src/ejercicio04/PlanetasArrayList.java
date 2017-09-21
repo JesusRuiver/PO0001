@@ -37,6 +37,7 @@ public class PlanetasArrayList {
 		 * Mostrar la capacidad y tamaño originales.
 		 */
 		System.out.println(planetas.size());
+		
 		/**
 		 * Comprobar si el Vector contiene la cadena “Saturno”. Si la contiene,
 		 * mostrar su posición.

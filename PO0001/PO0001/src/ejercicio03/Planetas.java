@@ -3,7 +3,7 @@
  */
 package ejercicio03;
 
-import java.util.ArrayList;
+import java.util.Vector;;
 
 /**
  * @author Jesús Manuel Ruiz Verdejo
@@ -22,7 +22,7 @@ public class Planetas {
 		 * Saturno, Tierra, Urano, Venus)
 		 */
 
-		ArrayList<String> planetas = new ArrayList();
+		Vector <String> planetas = new Vector ();
 
 		planetas.add("Jupiter");
 		planetas.add("Marte");
@@ -37,7 +37,8 @@ public class Planetas {
 		/**
 		 * Mostrar la capacidad y tamaño originales.
 		 */
-		System.out.println(planetas.size());
+		System.out.println("El tamaño del vector es de " + planetas.size());
+		System.out.println("La capacidad del vector es de " + planetas.capacity());
 		/**
 		 * Comprobar si el Vector contiene la cadena “Saturno”. Si la contiene,
 		 * mostrar su posición.
@@ -62,16 +63,23 @@ public class Planetas {
 		 * Insertar “Logroño” justo después del elemento “Tierra”. Mostrar el
 		 * Vector, su capacidad y su tamaño.
 		 */
+		
+		//Añadimos Logroño en la posición de la Tierra + 1
+		
 		planetas.add(planetas.indexOf("Tierra") + 1, "Logroño");
 
-		System.out.println(planetas.contains("Logroño"));
-		System.out.println(planetas.indexOf("Logroño"));
+		System.out.println(planetas.contains("Logroño")); //Comprobamos si el Vector contiene Logroño
+		System.out.println(planetas.indexOf("Logroño")); //Le pedimos que nos devuelva la posición que ocupa Logroño en el Vector
 
 		System.out.println(planetas);
 
 		/**
 		 * Eliminar todos los elementos del Vector.
 		 */
+		
+		planetas.removeAll(planetas);
+		
+		System.out.println(planetas);
 
 		/**
 		 * Mostrar por consola la capacidad y el tamaño del Vector final.
