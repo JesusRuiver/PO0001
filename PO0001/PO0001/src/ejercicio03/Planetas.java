@@ -3,7 +3,7 @@
  */
 package ejercicio03;
 
-import java.util.Vector;;
+import java.util.Vector;
 
 /**
  * @author Jesús Manuel Ruiz Verdejo

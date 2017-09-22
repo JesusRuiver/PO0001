@@ -46,28 +46,34 @@ public class Notas {
 
 		System.out.print("Introduzca la clave de usuario: ");
 
-		Integer clave = new Integer(leerEntrada.readLine().trim());
- 
 		/**
 		 * Si existe, se mostrará su calificación y un mensaje de “Enhorabuena”
 		 * si ha aprobado o un "Lo siento" si ha suspendido. Después el programa
 		 * finalizará.
 		 */
 
-		if (clave.equals(1505) || clave.equals(1234) || clave.equals(2600)) {
+		try {
+			Integer clave = new Integer(leerEntrada.readLine());
 
-			System.out.println("El usuario " + clave + " esta "+ notas.getOrDefault(clave, "aprobado.") + " Enhorabuena");
-		} else if (clave.equals(2800) || clave.equals(1300)) {
-			System.out.println("El usuario " + clave + " esta " + notas.getOrDefault(clave, " suspenso.") + "Lo siento");
-		}
-		/**
-		 * Si no existe la clave, el programa debe mostrar "Clave incorrecta" y
-		 * finalizar.
-		 */
+			if (clave.equals(1505) || clave.equals(1234) || clave.equals(2600)) {
 
-		else {
+				System.out.println(
+						"El usuario " + clave + " esta " + notas.getOrDefault(clave, "aprobado.") + " Enhorabuena");
 
-			System.out.println("La clave " + clave + " es incorrecta");
+			} else if (clave.equals(2800) || clave.equals(1300)) {
+
+				System.out.println(
+						"El usuario " + clave + " esta " + notas.getOrDefault(clave, " suspenso.") + " Lo siento");
+			}
+
+			/**
+			 * Si no existe la clave, el programa debe mostrar "Clave
+			 * incorrecta" y finalizar.
+			 */
+
+		} catch (NumberFormatException excepcion) {
+
+			System.out.println("La clave es incorrecta");
 			System.exit(0);
 		}
 
