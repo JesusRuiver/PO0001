@@ -46,8 +46,8 @@ public class Notas {
 
 		System.out.print("Introduzca la clave de usuario: ");
 
-		Integer clave = new Integer(leerEntrada.readLine());
-
+		Integer clave = new Integer(leerEntrada.readLine().trim());
+ 
 		/**
 		 * Si existe, se mostrará su calificación y un mensaje de “Enhorabuena”
 		 * si ha aprobado o un "Lo siento" si ha suspendido. Después el programa
