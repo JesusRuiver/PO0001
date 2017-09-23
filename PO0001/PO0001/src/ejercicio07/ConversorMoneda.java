@@ -17,52 +17,41 @@ public class ConversorMoneda {
 
 	/**
 	 * @param args
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		
-		HashMap<String, BigDecimal> monedas = new HashMap<String,BigDecimal>();
-		
-		monedas.put ("Euro", new BigDecimal(1));
-		monedas.put ("Dolar", new BigDecimal(1.1951000896325));
-		monedas.put ("Libra", new BigDecimal(0.88526912181303));
-		monedas.put ("Yen", new BigDecimal(133.9225927414));
-		
+
+		HashMap<String, BigDecimal> monedas = new HashMap<String, BigDecimal>();
+
+		monedas.put("euro", new BigDecimal(1.0));
+		monedas.put("dolar", new BigDecimal(1.1951));
+		monedas.put("libra", new BigDecimal(0.8852));
+		monedas.put("yen", new BigDecimal(133.9225));
+
 		System.out.print("Introduzca moneda de origen: ");
 		BufferedReader entradaOrigen = new BufferedReader(new InputStreamReader(System.in));
-		
+
 		String monedaOrigen = entradaOrigen.readLine().toLowerCase();
-		
+
 		System.out.print("Introduzca moneda de destino: ");
 		BufferedReader entradaDestino = new BufferedReader(new InputStreamReader(System.in));
-		
+
 		String monedaDestino = entradaDestino.readLine().toLowerCase();
-		
+
 		System.out.print("Introduzca importe a convertir: ");
 		BufferedReader entradaImporte = new BufferedReader(new InputStreamReader(System.in));
-		
-		BigDecimal importe = new BigDecimal (entradaImporte.readLine());
-		
-		System.out.println(monedas.get(monedaOrigen));	
-		System.out.println(monedas.get(monedaDestino));
-		System.out.println(importe);	
-		
-		
-		
-		/*if(entradaOrigen.equals(monedas.containsKey(monedas) && entradaDestino.equals(monedas.containsKey(monedas)))){
-			
-				BigDecimal resultado;
-				
-				System.out.println(monedas.get(entradaDestino));*/
-				
-				
-				
-				
-			
-			}
-			
-		
 
+		BigDecimal importe = new BigDecimal(entradaImporte.readLine());
+
+		if (monedas.containsKey(monedaOrigen) && monedas.containsKey(monedaDestino)) {
+
+			BigDecimal resultado = monedas.get(monedaDestino).divide(monedas.get(monedaOrigen));
+			
+			
+			System.out.println(resultado);
+
+		}else{
+			System.out.println("Una de las claves no existe");
+		}
 	}
-
-
+}
