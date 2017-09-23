@@ -59,11 +59,14 @@ public class Notas {
 
 				System.out.println(
 						"El usuario " + clave + " esta " + notas.getOrDefault(clave, "aprobado.") + " Enhorabuena");
+				
+				
 
 			} else if (clave.equals(2800) || clave.equals(1300)) {
 
 				System.out.println(
 						"El usuario " + clave + " esta " + notas.getOrDefault(clave, " suspenso.") + " Lo siento");
+				
 			}
 
 			/**
