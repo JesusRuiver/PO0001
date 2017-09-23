@@ -69,7 +69,7 @@ public class Notas {
 				
 			} else {
 				
-				
+				System.out.println("La clave es incorrecta");
 			}
 
 			/**
