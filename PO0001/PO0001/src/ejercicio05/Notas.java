@@ -27,7 +27,7 @@ public class Notas {
 		 * claves serán objetos Integer, los valores Strings)
 		 */
 		
-		Hashtable<Integer, String> notas = new Hashtable<Integer, String>(1,0.8f);
+		Hashtable<Integer, String> notas = new Hashtable<Integer, String>(10,0.8f);
 	
 		notas.put(1505, "aprobado");
 		notas.put(2800, "suspenso");
