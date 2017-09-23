@@ -17,7 +17,7 @@ public class NotasHashMap {
 	public static void main(String[] args) {
 		
 		/**
-		 * Utilizar un Hashtable con una capacidad de 10 y un factor de carga
+		 * Utilizar un HashMap con una capacidad de 10 y un factor de carga
 		 * del 80%. Contendrá los pares clave/valor de la siguiente tabla (las
 		 * claves serán objetos Integer, los valores Strings)
 		 */

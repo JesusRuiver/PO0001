@@ -26,15 +26,15 @@ public class Notas {
 		 * del 80%. Contendrá los pares clave/valor de la siguiente tabla (las
 		 * claves serán objetos Integer, los valores Strings)
 		 */
-
-		Hashtable<Integer, String> notas = new Hashtable<Integer, String>();
-
+		
+		Hashtable<Integer, String> notas = new Hashtable<Integer, String>(1,0.8f);
+	
 		notas.put(1505, "aprobado");
 		notas.put(2800, "suspenso");
 		notas.put(1300, "suspenso");
 		notas.put(1234, "aprobado");
 		notas.put(2600, "aprobado");
-
+		
 		/**
 		 * Crear una clase con un método main para saber si un usuario ha
 		 * aprobado o suspendido una prueba. El funcionamiento será el
@@ -66,6 +66,9 @@ public class Notas {
 
 				System.out.println(
 						"El usuario " + clave + " esta " + notas.getOrDefault(clave, " suspenso.") + " Lo siento");
+				
+			} else {
+				
 				
 			}
 
