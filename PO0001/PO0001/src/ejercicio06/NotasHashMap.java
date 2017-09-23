@@ -22,6 +22,13 @@ public class NotasHashMap {
 		 * claves serán objetos Integer, los valores Strings)
 		 */
 		
+		HashMap<Integer, String> notas = new HashMap <Integer,String>(10,0.8f);
+		
+		notas.put(1505, "aprobado");
+		notas.put(2800, "suspenso");
+		notas.put(1300, "suspenso");
+		notas.put(1234, "aprobado");
+		notas.put(2600, "aprobado");
 		
 		/**
 		 * Crear una clase con un método main para saber si un usuario ha
