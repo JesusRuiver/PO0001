@@ -28,14 +28,19 @@ public class ConversorMoneda {
 		HashMap<String, BigDecimal> monedas = new HashMap<String, BigDecimal>();
 
 		monedas.put("euro", new BigDecimal(1.0));
-		monedas.put("dolar", new BigDecimal(1.1951));
-		monedas.put("libra", new BigDecimal(0.8852));
-		monedas.put("yen", new BigDecimal(133.9225));
+		monedas.put("dolar", new BigDecimal(1.1817006563165));
+		monedas.put("libra", new BigDecimal(0.87642418930762));
+		monedas.put("yen", new BigDecimal(131.96093956189));
+		monedas.put("peso", new BigDecimal(21.202612161818));
 
-		System.out.println("Bienvenido al Conversor de Divisas Internacional");
-		System.out.println("Puede elegir entre las siguientes divisas: ");
+		System.out.println("**************************************************");
+		System.out.println(" Bienvenido al Conversor de Divisas Internacional");
+		System.out.println("************************************************** \n");
+		System.out.println("Puede elegir entre las siguientes divisas: \n");
 
-		
+		System.out.println(monedas.keySet() + "\n");
+
+		try {
 
 			System.out.print("Introduzca moneda de origen: ");
 			BufferedReader entradaOrigen = new BufferedReader(new InputStreamReader(System.in));
@@ -57,12 +62,16 @@ public class ConversorMoneda {
 				BigDecimal resultado = (monedas.get(monedaDestino)
 						.divide(monedas.get(monedaOrigen), 4, RoundingMode.HALF_UP).multiply(importe));
 
-				System.out.println(
-						"El importe de: " + importe + " " + monedaOrigen + " son " + resultado + " " + monedaDestino);
+				System.out.println("El importe de: " + importe + " de la moneda " + monedaOrigen + " equivale a "
+						+ resultado + " de la moneda " + monedaDestino);
 
 			} else {
-				System.out.println("Una de las claves no existe");
+				System.out.println("Solo puede introducir las siguientes monedas \n" + monedas.keySet() + "\n");
 			}
 		}
-	}
 
+		catch (NumberFormatException e) {
+			System.out.println("Los prametros introducidos no son validos");
+		}
+	}
+}
