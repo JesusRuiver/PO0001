@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -53,8 +54,8 @@ public class ConversorMoneda {
 
 			if (monedas.containsKey(monedaOrigen) && monedas.containsKey(monedaDestino)) {
 
-				BigDecimal resultado = monedas.get(monedaDestino)
-						.divide(monedas.get(monedaOrigen), RoundingMode.HALF_UP).multiply(importe);
+				BigDecimal resultado = (monedas.get(monedaDestino)
+						.divide(monedas.get(monedaOrigen), 4, RoundingMode.HALF_UP).multiply(importe));
 
 				System.out.println(
 						"El importe de: " + importe + " " + monedaOrigen + " son " + resultado + " " + monedaDestino);
