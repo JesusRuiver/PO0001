@@ -25,6 +25,12 @@ public class ConversorMoneda {
 	 */
 	public static void main(String[] args) throws IOException {
 
+		/**
+		 * Conversión de moneda. Pedir por teclado la moneda origen, la moneda
+		 * destino y el importe a convertir. Las equivalencias, referidas al
+		 * euro, se guardan en un HashMap.
+		 */
+
 		HashMap<String, BigDecimal> monedas = new HashMap<String, BigDecimal>();
 
 		monedas.put("euro", new BigDecimal(1.0));
