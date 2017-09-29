@@ -83,13 +83,7 @@ public class CuentaPalabras {
 			for (String clave : lista) {
 				brw.write(clave + " " + hm.get(clave));
 				brw.newLine();
-				
-			FileReader fr = new FileReader(destino);
-			BufferedReader br = new BufferedReader(fr);
-			
-			String texto = br.readLine();
-			
-			System.out.println(texto);
+
 			}
 			brw.close();
 
@@ -97,6 +91,7 @@ public class CuentaPalabras {
 			System.out.println("ERROR---" + e.toString());
 
 		}
+
 	}
 
 }
