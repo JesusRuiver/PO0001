@@ -4,12 +4,16 @@
 package ejercicio09;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Set;
 import java.util.StringTokenizer;
 
-import com.sun.org.apache.xml.internal.serializer.utils.StringToIntTable;
 
 /**
  * @author Jesús Manuel Ruiz Verdejo
@@ -57,6 +61,31 @@ public class CuentaPalabras {
 			
 			System.out.println("ERROR---"+ e.getMessage());
 				}
+		
+		// Pasamos las palabras del HashMap a un arrayList
+		
+		Set<String> claves1 = hm.keySet();
+		ArrayList<String> lista = new ArrayList<String>(claves1);
+		
+		//Ordenamos
+		 
+		 Collections.sort(lista); //argumento List, interfaz implementada
+		 
+		 //Creamos el fichero de salida
+		 
+		 try{
+			 
+			 FileWriter fw = new FileWriter(destino);
+			 
+			 BufferedWriter brw = new BufferedWriter(fw);
+			 
+			 
+			 
+		 } catch (Exception e) {
+			
+		}
 			}
+	
+		
 
 }
