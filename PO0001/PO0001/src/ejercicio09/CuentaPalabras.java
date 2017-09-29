@@ -14,6 +14,8 @@ public class CuentaPalabras {
 	 */
 	public static void main(String[] args) {
 		
+		String origen ="" //Ruta relativa hace referencia al .project
+		String destino
 	
 
 	}
