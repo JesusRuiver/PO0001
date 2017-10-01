@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ejercicio01B;
+package ejercicio01b;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
