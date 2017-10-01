@@ -30,7 +30,7 @@ public class Frase {
 
 		System.out.println("Introduzca una frase por favor");
 
-		String frase = leerEntrada.readLine();
+		String frase = leerEntrada.readLine().trim();
 
 		System.out.print("La Frase introducida es: ");
 		System.out.println(frase);
