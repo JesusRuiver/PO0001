@@ -7,11 +7,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
-import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+
 
 /**
  * @author Jesús Manuel Ruiz Verdejo
@@ -77,7 +75,7 @@ public class ConversorMoneda {
 		}
 
 		catch (NumberFormatException e) {
-			System.out.println("Los prametros introducidos no son validos");
+			System.out.println("Los parametros introducidos no son validos");
 		}
 	}
 }
