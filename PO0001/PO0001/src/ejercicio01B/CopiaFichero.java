@@ -12,7 +12,7 @@ import java.io.FileWriter;
  * @author Jesús Manuel Ruiz Verdejo
  *
  */
-public class CopiaFicchero {
+public class CopiaFichero {
 
 	/**
 	 * @param args
@@ -28,15 +28,27 @@ public class CopiaFicchero {
 		String original = "Origen.txt";
 		String copia = "copia.txt";
 
+		
+
 		try {
 
 			FileReader fr = new FileReader(original);
 			BufferedReader br = new BufferedReader(fr);
 
+			String textoOrigen = br.readLine();
+
 			FileWriter fw = new FileWriter(copia);
 			BufferedWriter bw = new BufferedWriter(fw);
 
-		} catch (Exception e) {
+			for (int i = 0; i <= textoOrigen.length(); i++) {
+
+				bw.write(textoOrigen);
+
+			}
+
+		} catch (
+
+		Exception e) {
 
 		}
 

@@ -32,7 +32,7 @@ public class CuentaPalabras {
 		HashMap<String, Integer> hm = new HashMap<String, Integer>();
 
 		try {
-			// Lectura del fichero, contamos las plabra cuardandolas en un
+			// Lectura del fichero, contamos las palabras guardandolas en un
 			// HashMap
 
 			FileReader fr = new FileReader(origen);
