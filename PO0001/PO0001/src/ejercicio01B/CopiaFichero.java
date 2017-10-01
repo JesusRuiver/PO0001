@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.StringTokenizer;
 
 /**
  * @author Jesús Manuel Ruiz Verdejo
@@ -28,8 +29,6 @@ public class CopiaFichero {
 		String original = "Origen.txt";
 		String copia = "copia.txt";
 
-		
-
 		try {
 
 			FileReader fr = new FileReader(original);
@@ -38,18 +37,16 @@ public class CopiaFichero {
 			String textoOrigen = br.readLine();
 
 			FileWriter fw = new FileWriter(copia);
-			BufferedWriter bw = new BufferedWriter(fw);
 
-			for (int i = 0; i <= textoOrigen.length(); i++) {
+			char[] cadena = textoOrigen.toCharArray();
 
-				bw.write(textoOrigen);
-
+			for (int i = 0; i < cadena.length; i++) {
+				fw.write(cadena[i]);
 			}
+			fw.close(); //Cerramos el fichero
 
-		} catch (
-
-		Exception e) {
-
+		} catch (Exception e) {
+			System.out.println("ERROR---" + e.toString());
 		}
 
 	}
