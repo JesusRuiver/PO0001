@@ -25,7 +25,7 @@ public class CuentaPalabras {
 	 */
 	public static void main(String[] args) {
 
-		String origen = "texto.txt"; // Ruta relativa hace referencia donde se
+		String origen = "LagrimasEnLaLluvia.txt"; // Ruta relativa hace referencia donde se
 										// encuentra .project
 		String destino = "contador.txt";
 
@@ -81,7 +81,7 @@ public class CuentaPalabras {
 			BufferedWriter brw = new BufferedWriter(fw);
 
 			for (String clave : lista) {
-				brw.write(clave + " " + hm.get(clave));
+				brw.write(clave + ": " + hm.get(clave));
 				brw.newLine();
 
 			}
